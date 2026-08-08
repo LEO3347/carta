@@ -31,8 +31,8 @@ function fireflies(count: number) {
   }));
 }
 
-export default function Surprise() {
-  const [scene, setScene] = useState<Scene>("intro");
+export default function Surprise({ initialScene = "intro" }: { initialScene?: Scene }) {
+  const [scene, setScene] = useState<Scene>(initialScene);
   const [transitioning, setTransitioning] = useState(false);
   const [musicOn, setMusicOn] = useState(false);
   const [musicReady, setMusicReady] = useState(false);
@@ -103,7 +103,7 @@ export default function Surprise() {
           <span className="eyebrow">Un pequeño cuento para ti</span>
           <h1>Tengo algo que<br /><em>quiero preguntarte…</em></h1>
           <p>Hay palabras que merecen un lugar bonito para ser dichas.</p>
-          <button className="button button-primary" onClick={() => go("letter")}>Descúbrelo <span>✦</span></button>
+          <a className="button button-primary discover-link" href="?scene=letter" onClick={(event) => { event.preventDefault(); go("letter"); }}>Descúbrelo <span>✦</span></a>
           <span className="scroll-hint">Toca para entrar al pantano encantado</span>
         </div>}
 

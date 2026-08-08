@@ -27,6 +27,7 @@ h1 { font-size:clamp(3.2rem,10vw,7.4rem); } h2 { font-size:clamp(3rem,8vw,6.4rem
 h1 em,h2 em { color:var(--pale-gold); font-weight:600; }
 .intro-panel p,.proposal>p { max-width:510px; margin:25px auto 30px; color:#d9e4df; font-family:"Cormorant Garamond",serif; font-size:clamp(1.1rem,3vw,1.35rem); line-height:1.45; }
 .button { min-height:54px; border:0; border-radius:999px; padding:0 28px; cursor:pointer; font-weight:600; letter-spacing:.03em; transition:transform .2s,box-shadow .2s,background .2s; }
+.discover-link { position:relative; z-index:8; display:inline-flex; align-items:center; justify-content:center; text-decoration:none; touch-action:manipulation; -webkit-tap-highlight-color:transparent; }
 .button:hover { transform:translateY(-2px); }.button:focus-visible,.music-control:focus-visible,.preview-nav button:focus-visible,.zoom-button:focus-visible { outline:3px solid var(--pale-gold); outline-offset:4px; }
 .button-primary { color:#132b23; background:linear-gradient(135deg,var(--pale-gold),var(--gold)); box-shadow:0 10px 35px rgba(214,168,75,.28),inset 0 1px rgba(255,255,255,.55); }
 .button span { margin-left:8px; }.scroll-hint { display:block; margin-top:18px; color:rgba(255,245,222,.55); font-size:.72rem; }
