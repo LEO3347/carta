@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: carta-sorpresa
+    runtime: node
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm run build
+    startCommand: pnpm run start -- --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.0
+      - key: NOTIFICATION_EMAIL
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: FROM_EMAIL
+        sync: false
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
